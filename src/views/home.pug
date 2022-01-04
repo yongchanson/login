@@ -1,0 +1,10 @@
+extends templates/layout
+
+block content
+  //- h1 #{usersname}
+  
+  if loggedIn
+        span Hi!!! #{loggerInUser.name}
+  
+  if errorMessage
+        span=errorMessage

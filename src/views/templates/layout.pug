@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="https://unpkg.com/mvp.css@1.7.4/mvp.css")
+    title #{pageTitle} | Wetube
+  body
+      header
+        h1=pageTitle
+        ul
+          li
+            a(href="/") Home
+          if loggedIn
+              li
+                a(href="/profile") #{loggerInUser.name}의 ProFile
+          else 
+              li
+                  a(href="/join") Join
+              li
+                  a(href="/login") Login  
+          //- if loggedIn
+          //-   li
+          //-     a(href="/Profile") Profile
+    
+      main
+          block content
